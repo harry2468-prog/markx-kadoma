@@ -1,0 +1,516 @@
+:root {
+  --gold: #d4af37;
+  --gold-light: #f7e089;
+  --gold-dark: #8c7326;
+  --bg-dark: #0b0b0b;
+  --card-bg: #141414;
+  --text-white: #f5f5f5;
+  --text-gray: #a5a5a5;
+  --border-gold: 1px solid rgba(212, 175, 55, 0.4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(11, 11, 11, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: var(--border-gold);
+  z-index: 1000;
+}
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--gold);
+  font-weight: 700;
+}
+.nav-logo {
+  height: 42px;
+  width: auto;
+}
+nav a {
+  color: var(--text-white);
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+nav a:hover {
+  color: var(--gold);
+}
+.btn-gold-sm {
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  color: #000 !important;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 20px 60px;
+  background: radial-gradient(circle at center, #261f0c 0%, #0b0b0b 70%);
+}
+.hero-content {
+  max-width: 900px;
+  z-index: 2;
+}
+.badge-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.flag-badge {
+  width: 45px;
+  height: 28px;
+  border-radius: 4px;
+  border: 1px solid var(--gold);
+}
+.lady-badge {
+  height: 38px;
+}
+.edition-badge {
+  color: var(--gold-light);
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 14px;
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 2px;
+}
+.glory-title {
+  font-size: clamp(2rem, 5vw, 3.8rem);
+  font-weight: 900;
+  color: var(--gold);
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+  margin-bottom: 12px;
+}
+.hero-sub {
+  color: var(--text-gray);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  margin-bottom: 25px;
+}
+.event-meta-pill {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  background: var(--card-bg);
+  border: var(--border-gold);
+  padding: 10px 20px;
+  border-radius: 30px;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+/* Countdown */
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 35px;
+}
+.timer-box {
+  background: rgba(20, 20, 20, 0.9);
+  border: 1px solid var(--gold-dark);
+  padding: 12px 18px;
+  border-radius: 8px;
+  min-width: 75px;
+}
+.timer-box span {
+  display: block;
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--gold-light);
+}
+.timer-box label {
+  font-size: 11px;
+  color: var(--text-gray);
+  text-transform: uppercase;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold), #aa771c);
+  color: #000;
+  text-decoration: none;
+  font-weight: 800;
+  padding: 14px 28px;
+  border-radius: 6px;
+  transition: transform 0.2s;
+}
+.btn-primary:hover {
+  transform: scale(1.04);
+}
+.btn-secondary {
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 6px;
+}
+
+/* Fleet Showcase */
+.section-head {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  padding: 0 20px;
+}
+.section-head h2 {
+  color: var(--gold);
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+.section-head p {
+  color: var(--text-gray);
+  font-size: 14px;
+}
+
+.car-spotlight {
+  padding: 80px 20px;
+  background: #0f0f0f;
+}
+.car-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+.car-card {
+  background: var(--card-bg);
+  border: var(--border-gold);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.car-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+.car-desc {
+  padding: 20px;
+}
+.car-desc h3 {
+  color: var(--gold-light);
+  margin-bottom: 6px;
+}
+.car-desc p {
+  color: var(--text-gray);
+  font-size: 13px;
+}
+
+/* Convoys */
+.convoys {
+  padding: 80px 20px;
+}
+.route-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+.route-card {
+  background: var(--card-bg);
+  border: 1px solid #222;
+  border-top: 3px solid var(--gold);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+.route-card h3 {
+  color: var(--gold-light);
+  margin-bottom: 6px;
+}
+.route-card p {
+  font-size: 13px;
+  color: #fff;
+  margin-bottom: 4px;
+}
+.route-card span {
+  font-size: 11px;
+  color: var(--text-gray);
+}
+
+/* Gallery */
+.gallery {
+  padding: 80px 20px;
+  background: #0e0e0e;
+}
+.gallery-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+.gallery-item {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #252525;
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Registration Form */
+.registration-section {
+  padding: 80px 20px;
+}
+.form-container {
+  max-width: 750px;
+  margin: auto;
+  background: var(--card-bg);
+  border: var(--border-gold);
+  border-radius: 14px;
+  padding: 35px;
+}
+.form-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+.form-header h2 {
+  color: var(--gold);
+}
+.form-header p {
+  color: var(--text-gray);
+  font-size: 13px;
+}
+.form-group {
+  margin-bottom: 18px;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+@media (max-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gold-light);
+}
+input, select {
+  width: 100%;
+  padding: 12px 14px;
+  background: #1c1c1c;
+  border: 1px solid #333;
+  color: #fff;
+  border-radius: 6px;
+  outline: none;
+}
+input:focus, select:focus {
+  border-color: var(--gold);
+}
+
+/* Payments UI */
+.payment-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.tab-btn {
+  background: #222;
+  border: 1px solid #333;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.tab-btn.active {
+  background: var(--gold);
+  color: #000;
+  font-weight: 700;
+}
+.pay-box {
+  background: #181818;
+  border: 1px solid #2d2612;
+  border-left: 4px solid var(--gold);
+  padding: 12px 15px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+.pay-box .small-text {
+  font-size: 11px;
+  color: var(--text-gray);
+  margin-top: 4px;
+}
+.hidden {
+  display: none;
+}
+
+.btn-submit {
+  width: 100%;
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  color: #000;
+  padding: 15px;
+  border: none;
+  font-weight: 800;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Ticket Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 2000;
+}
+.ticket-card {
+  background: #111;
+  border: 2px solid var(--gold);
+  width: 100%;
+  max-width: 460px;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.25);
+}
+.ticket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #333;
+  padding-bottom: 12px;
+  text-align: center;
+}
+.ticket-logo {
+  height: 40px;
+}
+.ticket-body {
+  padding: 20px 0;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.gold-text {
+  color: var(--gold);
+  font-weight: 800;
+}
+.ticket-stamp-zone {
+  margin: 15px 0 0;
+  display: flex;
+  justify-content: center;
+}
+.stamp-circle {
+  width: 140px;
+  height: 140px;
+  border: 2px dashed var(--gold);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-light);
+  font-size: 11px;
+}
+.ticket-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.btn-whatsapp {
+  background: #25d366;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btn-close {
+  background: #222;
+  color: #aaa;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background: #080808;
+  border-top: 1px solid #1a1a1a;
+  padding: 40px 20px 20px;
+}
+.footer-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+.footer-grid h3, .footer-grid h4 {
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+.footer-grid p {
+  color: var(--text-gray);
+  font-size: 13px;
+  line-height: 1.6;
+}
+.copy-bar {
+  text-align: center;
+  border-top: 1px solid #181818;
+  margin-top: 30px;
+  padding-top: 15px;
+  font-size: 12px;
+  color: #555;
+}

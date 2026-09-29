@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team Mark X Kadoma | City of Gold Edition</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <img src="bigbulllogo.png" alt="Big Bull" class="nav-logo" />
+        <span>TEAM MARK X <b>KADOMA</b></span>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#convoys">Convoys</a>
+        <a href="#gallery">Showcase</a>
+        <a href="#register" class="btn-gold-sm">Register Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="badge-row">
+        <img src="zimflag.jpeg" alt="Zimbabwe" class="flag-badge" />
+        <span class="edition-badge">CITY OF GOLD EDITION</span>
+        <img src="ladybulllogo.png" alt="Lady Bulls" class="lady-badge" />
+      </div>
+
+      <h1 class="glory-title">BIG BULLS MEET IN THE MIDDLE</h1>
+      <p class="hero-sub">The Ultimate Nationwide Automotive & Lifestyle Experience</p>
+
+      <div class="event-meta-pill">
+        <span>📍 Speedway Bar, Kadoma</span>
+        <span>🗓️ Saturday, 10 October 2026</span>
+        <span>⏰ 09:00 AM Till Late</span>
+      </div>
+
+      <!-- Countdown -->
+      <div class="countdown" id="countdown">
+        <div class="timer-box"><span id="days">00</span><label>Days</label></div>
+        <div class="timer-box"><span id="hours">00</span><label>Hours</label></div>
+        <div class="timer-box"><span id="mins">00</span><label>Minutes</label></div>
+        <div class="timer-box"><span id="secs">00</span><label>Seconds</label></div>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#register" class="btn-primary">Register Your Car</a>
+        <a href="#payments" class="btn-secondary">Payment Methods (EcoCash / InnBucks)</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dual Car Showcase -->
+  <section class="car-spotlight" id="about">
+    <div class="section-head">
+      <h2>FLEET SHOWCASE: GRX120 & GRX130</h2>
+      <p>From the original 2004 classics to customized stance & GR Sport builds</p>
+    </div>
+    <div class="car-grid">
+      <div class="car-card">
+        <img src="toyotamarkx.webp" alt="Toyota Mark X Black Edition" />
+        <div class="car-desc">
+          <h3>Mark X Performance Build</h3>
+          <p>Custom Stance • Quad Exhaust • Track Ready</p>
+        </div>
+      </div>
+      <div class="car-card">
+        <img src="toyotamarkx2.webp" alt="Toyota Mark X Gold Edition" />
+        <div class="car-desc">
+          <h3>City of Gold Edition</h3>
+          <p>Gold Accent Package • Luxury V6 Cruiser</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Convoy Routes -->
+  <section class="convoys" id="convoys">
+    <div class="section-head">
+      <h2>NATIONWIDE CONVOY CONVERGENCE</h2>
+      <p>Clubs departing simultaneously across Zimbabwe to meet in Kadoma Middle City</p>
+    </div>
+    <div class="route-grid">
+      <div class="route-card"><h3>Harare</h3><p>Departing: 06:30 AM</p><span>To Kadoma (140km)</span></div>
+      <div class="route-card"><h3>Bulawayo</h3><p>Departing: 05:30 AM</p><span>To Kadoma (295km)</span></div>
+      <div class="route-card"><h3>Gweru</h3><p>Departing: 07:15 AM</p><span>To Kadoma (130km)</span></div>
+      <div class="route-card"><h3>Kwekwe</h3><p>Departing: 08:00 AM</p><span>To Kadoma (68km)</span></div>
+      <div class="route-card"><h3>Mutare</h3><p>Departing: 04:30 AM</p><span>To Kadoma (400km)</span></div>
+    </div>
+  </section>
+
+  <!-- Visual Poster & Lifestyle Gallery -->
+  <section class="gallery" id="gallery">
+    <div class="section-head">
+      <h2>OFFICIAL EVENT GALLERIES</h2>
+      <p>Trophies, Lady Bulls, Music and Automotive Excellence</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="1.jpeg" alt="Event Main Poster" /></div>
+      <div class="gallery-item"><img src="2.jpeg" alt="Lady Bulls Queens of Gold" /></div>
+      <div class="gallery-item"><img src="3.jpeg" alt="Lady Bulls Style" /></div>
+      <div class="gallery-item"><img src="4.jpeg" alt="Organisers Card" /></div>
+      <div class="gallery-item"><img src="5.jpeg" alt="Convoy Map" /></div>
+      <div class="gallery-item"><img src="6.jpeg" alt="City of Gold" /></div>
+    </div>
+  </section>
+
+  <!-- Registration Section -->
+  <section class="registration-section" id="register">
+    <div class="form-container">
+      <div class="form-header">
+        <h2>NATIONAL EVENT REGISTRATION</h2>
+        <p>Enter your details below to generate your official pass and confirm your spot.</p>
+      </div>
+
+      <form id="regForm">
+        <div class="form-group">
+          <label>Full Name / Driver Name *</label>
+          <input type="text" id="fullName" placeholder="e.g. Tinashe Moyo" required />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>WhatsApp Contact Number *</label>
+            <input type="tel" id="phoneNumber" placeholder="e.g. 0771 234 567" required />
+          </div>
+          <div class="form-group">
+            <label>City You Are Joining From *</label>
+            <select id="originCity" required>
+              <option value="">Select Convoy City</option>
+              <option value="Harare">Harare</option>
+              <option value="Bulawayo">Bulawayo</option>
+              <option value="Gweru">Gweru</option>
+              <option value="Kwekwe">Kwekwe</option>
+              <option value="Mutare">Mutare</option>
+              <option value="Kadoma Resident">Kadoma Resident</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Mark X Generation / Vehicle *</label>
+            <select id="vehicleGen" required>
+              <option value="Mark X GRX120 (2004-2009)">Mark X GRX120 (2004-2009)</option>
+              <option value="Mark X GRX130 (2009-2019)">Mark X GRX130 (2009-2019)</option>
+              <option value="Lady Bulls Special Entry">Lady Bulls Special Entry</option>
+              <option value="Spectator / Other Vehicle">Spectator / Other Vehicle</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Vehicle Reg Number (Plate)</label>
+            <input type="text" id="regPlate" placeholder="e.g. AFZ 1234" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Entry Category *</label>
+          <select id="category" required>
+            <option value="Show & Shine / Best Pimped">Show & Shine / Best Pimped</option>
+            <option value="Loud Exhaust King">Loud Exhaust King</option>
+            <option value="Lady Bulls: Queen of the Track">Lady Bulls: Queen of the Track</option>
+            <option value="Golden Touch (Interior & Sound)">Golden Touch (Interior & Sound)</option>
+            <option value="General Admission / Convoy Cruiser">General Admission / Convoy Cruiser</option>
+          </select>
+        </div>
+
+        <!-- Payment Mode Select -->
+        <div class="form-group" id="payments">
+          <label>Preferred Payment Method *</label>
+          <div class="payment-tabs">
+            <button type="button" class="tab-btn active" onclick="switchPay('ecocash')">EcoCash</button>
+            <button type="button" class="tab-btn" onclick="switchPay('innbucks')">InnBucks</button>
+            <button type="button" class="tab-btn" onclick="switchPay('card')">Visa / Bank</button>
+            <button type="button" class="tab-btn" onclick="switchPay('cash')">USD Cash at Gate</button>
+          </div>
+
+          <!-- Payment Info Cards -->
+          <div class="pay-details" id="payDetails">
+            <div id="ecocashBox" class="pay-box">
+              <p><b>EcoCash USD / ZiG Transfer:</b></p>
+              <p>Send to: <b>0790 187 400</b> (Craig T - Craig Motors)</p>
+              <p class="small-text">Reference your Name & Plate Number. Enter your confirmation code below.</p>
+            </div>
+            <div id="innbucksBox" class="pay-box hidden">
+              <p><b>InnBucks Payment:</b></p>
+              <p>Account / Phone: <b>0790 187 400</b></p>
+              <p class="small-text">Deposit via any Simbisa / InnBucks outlet nationwide.</p>
+            </div>
+            <div id="cardBox" class="pay-box hidden">
+              <p><b>Bank / Visa / Mastercard:</b></p>
+              <p>Direct transfer & POS card machines available on venue gate.</p>
+            </div>
+            <div id="cashBox" class="pay-box hidden">
+              <p><b>USD Cash on Arrival:</b></p>
+              <p>Pay cash at the Speedway Bar gate checkpoint to obtain your physical stamp.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Payment Reference / Transaction ID (Optional if paying Cash)</label>
+          <input type="text" id="payRef" placeholder="e.g. MP260928.1234.H or Cash" />
+        </div>
+
+        <button type="submit" class="btn-submit">GENERATE DIGITAL PASS & CONFIRM VIA WHATSAPP</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Pass Generation Modal -->
+  <div class="modal-overlay hidden" id="ticketModal">
+    <div class="ticket-card">
+      <div class="ticket-header">
+        <img src="bigbulllogo.png" class="ticket-logo" />
+        <div>
+          <h3>TEAM MARK X KADOMA</h3>
+          <span>OFFICIAL ENTRY PASS</span>
+        </div>
+        <img src="ladybulllogo.png" class="ticket-logo" />
+      </div>
+
+      <div class="ticket-body">
+        <p><strong>NAME:</strong> <span id="passName"></span></p>
+        <p><strong>CONVOY CITY:</strong> <span id="passCity"></span></p>
+        <p><strong>CAR:</strong> <span id="passCar"></span></p>
+        <p><strong>CATEGORY:</strong> <span id="passCat"></span></p>
+        <p><strong>PASS ID:</strong> <span id="passId" class="gold-text"></span></p>
+
+        <div class="ticket-stamp-zone">
+          <div class="stamp-circle">
+            <span>OFFICIAL GATE</span>
+            <b>STAMP ZONE</b>
+            <small>SPEEDWAY BAR</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="ticket-footer">
+        <button id="sendWhatsAppBtn" class="btn-whatsapp">SEND TO ORGANISERS VIA WHATSAPP</button>
+        <button onclick="closeModal()" class="btn-close">Close Pass</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contacts & Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h3>TEAM MARK X KADOMA</h3>
+        <p>United • Powerful • Fearless</p>
+        <p>Road map to Kadoma Music Festival @ Odyssey</p>
+      </div>
+      <div>
+        <h4>ORGANISERS DIRECT LINE</h4>
+        <p>Craig T (Craig Motors): <b>0790 187 400</b></p>
+        <p>DJ Sir Clemmie Dee (A1 Soundz): <b>0773 730 063</b></p>
+        <p>Mr Mapeta (Speedway Bar): <b>0779 216 474</b></p>
+      </div>
+    </div>
+    <div class="copy-bar">
+      &copy; 2026 Team Mark X Zimbabwe • Hosted Free on GitHub Pages
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
