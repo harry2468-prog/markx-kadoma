@@ -72,7 +72,8 @@ document.getElementById("regForm").addEventListener("submit", function(e) {
   document.getElementById("passId").innerText = passNum;
 
   // Show Ticket Modal
-  document.getElementById("ticketModal").classList.remove("hidden");
+  // Show Ticket Modal
+  document.getElementById("ticketModal").style.setProperty("display", "flex", "important");
 
   // Pre-configure WhatsApp Redirect Message to Craig Motors (0790 187 400)
   const waText = encodeURIComponent(
@@ -96,5 +97,5 @@ document.getElementById("regForm").addEventListener("submit", function(e) {
 });
 
 function closeModal() {
-  document.getElementById("ticketModal").classList.add("hidden");
+  document.getElementById("ticketModal").style.setProperty("display", "none", "important");
 }
