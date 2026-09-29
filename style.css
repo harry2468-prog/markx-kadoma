@@ -388,10 +388,10 @@ input:focus, select:focus {
   color: var(--text-gray);
   margin-top: 4px;
 }
-.hidden {
-  display: none;
+.hidden,
+.modal-overlay.hidden {
+  display: none !important;
 }
-
 .btn-submit {
   width: 100%;
   background: linear-gradient(135deg, var(--gold), var(--gold-dark));
