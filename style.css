@@ -2,11 +2,11 @@
   --gold: #d4af37;
   --gold-light: #f7e089;
   --gold-dark: #8c7326;
-  --bg-dark: #0b0b0b;
-  --card-bg: #141414;
+  --bg-dark: #080808;
+  --card-bg: #121212;
   --text-white: #f5f5f5;
-  --text-gray: #a5a5a5;
-  --border-gold: 1px solid rgba(212, 175, 55, 0.4);
+  --text-gray: #a8a8a8;
+  --border-gold: 1px solid rgba(212, 175, 55, 0.35);
 }
 
 * {
@@ -14,6 +14,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
 }
 
 body {
@@ -27,8 +32,8 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(11, 11, 11, 0.95);
-  backdrop-filter: blur(8px);
+  background: rgba(8, 8, 8, 0.95);
+  backdrop-filter: blur(10px);
   border-bottom: var(--border-gold);
   z-index: 1000;
 }
@@ -55,7 +60,8 @@ nav a {
   color: var(--text-white);
   text-decoration: none;
   margin-left: 20px;
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: 600;
   transition: 0.3s;
 }
 nav a:hover {
@@ -64,7 +70,7 @@ nav a:hover {
 .btn-gold-sm {
   background: linear-gradient(135deg, var(--gold), var(--gold-dark));
   color: #000 !important;
-  font-weight: 700;
+  font-weight: 800;
   padding: 8px 16px;
   border-radius: 4px;
 }
@@ -72,16 +78,23 @@ nav a:hover {
 /* Hero */
 .hero {
   position: relative;
-  min-height: 90vh;
+  min-height: 92vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 120px 20px 60px;
-  background: radial-gradient(circle at center, #261f0c 0%, #0b0b0b 70%);
+  padding: 130px 20px 60px;
+  background: radial-gradient(circle at center, #261904 0%, #080808 75%);
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
 }
 .hero-content {
-  max-width: 900px;
+  position: relative;
+  max-width: 920px;
   z-index: 2;
 }
 .badge-row {
@@ -89,47 +102,57 @@ nav a:hover {
   align-items: center;
   justify-content: center;
   gap: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 .flag-badge {
-  width: 45px;
-  height: 28px;
+  width: 48px;
+  height: 30px;
   border-radius: 4px;
   border: 1px solid var(--gold);
 }
 .lady-badge {
-  height: 38px;
+  height: 40px;
 }
 .edition-badge {
   color: var(--gold-light);
   letter-spacing: 2px;
-  font-weight: 700;
-  font-size: 14px;
+  font-weight: 800;
+  font-size: 13px;
   border-bottom: 2px solid var(--gold);
   padding-bottom: 2px;
 }
+.hero-subhead {
+  color: var(--gold-light);
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
 .glory-title {
-  font-size: clamp(2rem, 5vw, 3.8rem);
+  font-size: clamp(2.1rem, 5.2vw, 4rem);
   font-weight: 900;
   color: var(--gold);
-  text-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
-  margin-bottom: 12px;
+  text-shadow: 0 0 25px rgba(212, 175, 55, 0.45);
+  margin-bottom: 8px;
 }
-.hero-sub {
-  color: var(--text-gray);
-  font-size: clamp(1rem, 2vw, 1.25rem);
+.hero-tagline {
+  color: #ffffff;
+  letter-spacing: 4px;
+  font-weight: 700;
+  font-size: 14px;
   margin-bottom: 25px;
 }
 .event-meta-pill {
   display: inline-flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 15px;
   background: var(--card-bg);
   border: var(--border-gold);
-  padding: 10px 20px;
+  padding: 12px 24px;
   border-radius: 30px;
   margin-bottom: 30px;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 /* Countdown */
@@ -140,7 +163,7 @@ nav a:hover {
   margin-bottom: 35px;
 }
 .timer-box {
-  background: rgba(20, 20, 20, 0.9);
+  background: rgba(18, 18, 18, 0.95);
   border: 1px solid var(--gold-dark);
   padding: 12px 18px;
   border-radius: 8px;
@@ -148,7 +171,7 @@ nav a:hover {
 }
 .timer-box span {
   display: block;
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 900;
   color: var(--gold-light);
 }
@@ -157,7 +180,6 @@ nav a:hover {
   color: var(--text-gray);
   text-transform: uppercase;
 }
-
 .hero-actions {
   display: flex;
   justify-content: center;
@@ -176,19 +198,23 @@ nav a:hover {
 .btn-primary:hover {
   transform: scale(1.04);
 }
-.btn-secondary {
-  border: 1px solid var(--gold);
-  color: var(--gold);
+.btn-whatsapp-hero {
+  background: #25d366;
+  color: #fff;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   padding: 14px 28px;
   border-radius: 6px;
+  transition: transform 0.2s;
+}
+.btn-whatsapp-hero:hover {
+  transform: scale(1.04);
 }
 
-/* Fleet Showcase */
+/* Sections Common */
 .section-head {
   text-align: center;
-  max-width: 700px;
+  max-width: 760px;
   margin: 0 auto 40px;
   padding: 0 20px;
 }
@@ -196,50 +222,131 @@ nav a:hover {
   color: var(--gold);
   font-size: 28px;
   margin-bottom: 8px;
+  font-weight: 800;
 }
 .section-head p {
   color: var(--text-gray);
   font-size: 14px;
 }
 
+/* 3-Car Spotlight Grid */
 .car-spotlight {
   padding: 80px 20px;
-  background: #0f0f0f;
+  background: #0d0d0d;
 }
-.car-grid {
-  max-width: 1100px;
+.car-grid-3 {
+  max-width: 1200px;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 25px;
 }
 .car-card {
   background: var(--card-bg);
-  border: var(--border-gold);
+  border: 1px solid #222;
   border-radius: 12px;
   overflow: hidden;
+  transition: transform 0.3s, border-color 0.3s;
 }
-.car-card img {
+.car-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+}
+.hero-car-card {
+  border: 2px solid var(--gold);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
+}
+.car-img-wrap {
   width: 100%;
   height: 240px;
+  background: #000;
+  overflow: hidden;
+}
+.car-img-wrap img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  display: block;
+  transition: transform 0.4s;
+}
+.car-card:hover .car-img-wrap img {
+  transform: scale(1.06);
 }
 .car-desc {
-  padding: 20px;
+  padding: 22px;
+}
+.car-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 800;
+  background: #252525;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+.car-badge.gold {
+  background: var(--gold);
+  color: #000;
 }
 .car-desc h3 {
   color: var(--gold-light);
   margin-bottom: 6px;
+  font-size: 20px;
 }
 .car-desc p {
   color: var(--text-gray);
   font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Schedule & Awards Cards (Side-by-Side) */
+.schedule-awards-section {
+  padding: 80px 20px;
+  background: var(--bg-dark);
+}
+.dual-panel-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+.info-card {
+  background: var(--card-bg);
+  border: var(--border-gold);
+  border-radius: 12px;
+  padding: 30px;
+}
+.info-card-header {
+  border-bottom: 1px solid #282828;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+.info-card-header h3 {
+  color: var(--gold);
+  font-size: 20px;
+}
+.info-list {
+  list-style: none;
+}
+.info-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #1a1a1a;
+  font-size: 13px;
+  color: #ddd;
+  line-height: 1.6;
+}
+.info-list li:last-child {
+  border-bottom: none;
+}
+.info-list li b {
+  color: var(--gold-light);
 }
 
 /* Convoys */
 .convoys {
   padding: 80px 20px;
+  background: #0d0d0d;
 }
 .route-grid {
   max-width: 1100px;
@@ -273,7 +380,7 @@ nav a:hover {
 /* Gallery */
 .gallery {
   padding: 80px 20px;
-  background: #0e0e0e;
+  background: var(--bg-dark);
 }
 .gallery-grid {
   max-width: 1200px;
@@ -301,6 +408,7 @@ nav a:hover {
 /* Registration Form */
 .registration-section {
   padding: 80px 20px;
+  background: #0d0d0d;
 }
 .form-container {
   max-width: 750px;
@@ -354,7 +462,7 @@ input:focus, select:focus {
   border-color: var(--gold);
 }
 
-/* Payments UI */
+/* Payments Tabs */
 .payment-tabs {
   display: flex;
   gap: 8px;
@@ -392,6 +500,7 @@ input:focus, select:focus {
 .modal-overlay.hidden {
   display: none !important;
 }
+
 .btn-submit {
   width: 100%;
   background: linear-gradient(135deg, var(--gold), var(--gold-dark));
@@ -408,7 +517,7 @@ input:focus, select:focus {
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.88);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -486,7 +595,7 @@ input:focus, select:focus {
 
 /* Footer */
 footer {
-  background: #080808;
+  background: #050505;
   border-top: 1px solid #1a1a1a;
   padding: 40px 20px 20px;
 }
